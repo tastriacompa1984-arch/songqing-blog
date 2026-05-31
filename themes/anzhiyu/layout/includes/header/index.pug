@@ -23,6 +23,9 @@ else
   - var isHomeClass = 'not-top-img'
 header#page-header(class=`${isHomeClass}` style=home_index_img_bg)
   !=partial('includes/header/nav', {}, {cache: true})
+  if is_home() && theme.home_bg_video
+    video#home_bg_video(autoplay loop muted playsinline src=url_for(theme.home_bg_video) style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; pointer-events: none;")
+    .home_bg_video_mask(style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.35); z-index: -1; pointer-events: none;")
   if top_img !== false
     if is_post()
       if page.bilibili_bg
