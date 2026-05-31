@@ -162,3 +162,141 @@
   letter-spacing: 0.5px;
 }
 
+/* ==========================================================================
+   Mobile-First Premium Overhaul Styles (Screen width <= 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. Global Responsive Typography & Spacing Gutter */
+  body, p, li {
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+    letter-spacing: 0.2px !important;
+  }
+  
+  /* Article container card-like breathing margins */
+  #content-inner, #post, .layout {
+    padding: 1rem 0.8rem !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+  }
+  
+  /* Elegant Blockquotes on Mobile */
+  blockquote {
+    border-left: 4px solid #FE2C55 !important; /* TikTok neon red indicator */
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 4px 12px 12px 4px !important;
+    padding: 1.1rem 1.1rem !important;
+    margin: 1.3rem 0.3rem !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03) !important;
+  }
+  
+  [data-theme="dark"] blockquote {
+    background: rgba(0, 0, 0, 0.2) !important;
+  }
+
+  /* 2. Ultra-Frosted Glass Mobile Navigation Bar */
+  #nav {
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    background: rgba(255, 255, 255, 0.72) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+  }
+  
+  [data-theme="dark"] #nav {
+    background: rgba(18, 18, 18, 0.72) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  }
+
+  /* 3. Homepage Card List Makeover */
+  #recent-posts > .recent-post-item {
+    border-radius: 16px !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04) !important;
+    margin: 0.8rem 0.4rem 1.2rem 0.4rem !important;
+    padding: 0 !important;
+    transition: all 0.3s ease !important;
+    background: var(--anzhiyu-card-bg) !important;
+    overflow: hidden;
+  }
+
+  [data-theme="dark"] #recent-posts > .recent-post-item {
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+  }
+
+  #recent-posts > .recent-post-item:active {
+    transform: scale(0.985) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02) !important;
+  }
+
+  #recent-posts > .recent-post-item .post_cover img {
+    border-radius: 16px 16px 0 0 !important;
+  }
+
+  #recent-posts > .recent-post-item .recent-post-info {
+    padding: 1.2rem 1.2rem !important;
+  }
+
+  /* 4. Poetry Card layout and font scaling for mobile */
+  .poetry-card {
+    padding: 2rem 1rem !important;
+    margin: 1.5rem 0.1rem !important;
+    border-radius: 14px !important;
+  }
+
+  .poetry-card::before {
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+  }
+
+  .poetry-header {
+    font-size: 1.85em !important;
+    margin-bottom: 0.4rem !important;
+    letter-spacing: 1px !important;
+  }
+
+  .poetry-author {
+    font-size: 1.05em !important;
+  }
+
+  .poetry-divider {
+    margin: 1.2rem 0 !important;
+    letter-spacing: 5px !important;
+  }
+
+  /* Shrink fonts on mobile to guarantee verses stay on single lines without wrapping */
+  .poetry-content {
+    font-size: 13.5px !important;
+    line-height: 2.1 !important;
+    margin-bottom: 1.8rem !important;
+    letter-spacing: 0.2px !important;
+    white-space: nowrap !important; /* Force single line rendering */
+    overflow-x: auto !important; /* Allow swipe-to-scroll if screen is extremely small */
+    padding-bottom: 5px;
+  }
+
+  .poetry-translation {
+    font-size: 13.5px !important;
+    line-height: 2.0 !important;
+    padding-top: 1.8rem !important;
+    margin-top: 1.8rem !important;
+    letter-spacing: 0.2px !important;
+    white-space: nowrap !important;
+    overflow-x: auto !important;
+    padding-bottom: 5px;
+  }
+  
+  /* Custom styled mini scrollbars for poetry swipe-to-scroll on tiny phones */
+  .poetry-content::-webkit-scrollbar,
+  .poetry-translation::-webkit-scrollbar {
+    height: 3px !important;
+  }
+  .poetry-content::-webkit-scrollbar-thumb,
+  .poetry-translation::-webkit-scrollbar-thumb {
+    background: rgba(255, 215, 0, 0.2) !important;
+    border-radius: 10px !important;
+  }
+}
+
