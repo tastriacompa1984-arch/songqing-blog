@@ -16,8 +16,6 @@ if !theme.disable_top_img && page.top_img !== false
 #post-tools.post-tools
   .post-tools-left
     div.rewardLeftButton
-      if theme.reward.enable && theme.reward.QR_code
-          !=partial('includes/post/reward', {}, {cache: true})
       if theme.ptool.mode
         .reward-link.mode
           a.reward-link-button(href=url_for(theme.ptool.mode))
