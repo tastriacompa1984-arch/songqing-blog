@@ -420,3 +420,113 @@
   }
 }
 
+/* ==========================================================================
+   Mobile Performance & Premium Douyin Banner Enhancements
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* GPU Acceleration for core components to avoid scrolling lags */
+  #recent-posts > .recent-post-item,
+  #aside-content .card-info,
+  .poetry-card,
+  .topGroup .todayCard {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  /* Defer rendering of offscreen post cards to speed up initial load */
+  #recent-posts > .recent-post-item {
+    content-visibility: auto;
+    contain-intrinsic-size: 380px;
+  }
+
+  /* Force display the topGroup banner container on mobile */
+  #topGroup, .topGroup {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    width: 100% !important;
+    padding: 0 0.5rem !important;
+    margin: 0.5rem 0 1rem 0 !important;
+  }
+
+  /* Hide the recommended grid posts on mobile to avoid layout crowding */
+  .topGroup > .recent-post-item {
+    display: none !important;
+  }
+
+  /* Enable and style the premium Douyin Banner Card on mobile */
+  .topGroup .todayCard {
+    display: block !important;
+    width: 100% !important;
+    height: 180px !important;
+    margin: 0 !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    background: linear-gradient(135deg, rgba(254, 44, 85, 0.15) 0%, rgba(37, 244, 238, 0.15) 100%) !important;
+    border: 1.5px solid rgba(254, 44, 85, 0.15) !important;
+    box-shadow: 0 10px 30px rgba(254, 44, 85, 0.08) !important;
+    position: relative !important;
+  }
+
+  /* Premium Hover / Active Press state for Douyin Banner on mobile */
+  .topGroup .todayCard:active {
+    transform: scale(0.98) translateZ(0) !important;
+    box-shadow: 0 4px 15px rgba(254, 44, 85, 0.1) !important;
+    border-color: rgba(254, 44, 85, 0.3) !important;
+    transition: transform 0.1s ease !important;
+  }
+
+  .topGroup .todayCard-cover {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    opacity: 0.9 !important;
+  }
+
+  .topGroup .todayCard::after {
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.1) 100%) !important;
+  }
+
+  /* Typography alignment in mobile Douyin Banner */
+  .topGroup .todayCard .todayCard-info {
+    left: 1.2rem !important;
+    bottom: 1.2rem !important;
+  }
+
+  .topGroup .todayCard .todayCard-info .todayCard-tips {
+    font-size: 10px !important;
+    padding: 3px 10px !important;
+    margin-bottom: 8px !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .topGroup .todayCard .todayCard-info .todayCard-title {
+    font-size: 20px !important;
+    line-height: 28px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.2px !important;
+  }
+
+  /* Elegant glass-like More Button on mobile Douyin Banner */
+  .topGroup .banner-button {
+    right: 1.2rem !important;
+    bottom: 1.2rem !important;
+    padding: 6px 14px !important;
+    font-size: 11px !important;
+    height: auto !important;
+    width: auto !important;
+    line-height: 1.2 !important;
+    border-radius: 30px !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+  }
+
+  .topGroup .banner-button:active {
+    background: linear-gradient(135deg, #FE2C55 0%, #25F4EE 100%) !important;
+    border-color: transparent !important;
+  }
+}
+
