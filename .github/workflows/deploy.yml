@@ -5,6 +5,9 @@ on:
     branches:
       - main # Trigger on push to main branch
 
+permissions:
+  contents: write # Grant write permission to GITHUB_TOKEN to push to gh-pages branch
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
