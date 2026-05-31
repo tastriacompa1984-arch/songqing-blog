@@ -11,6 +11,7 @@ tags:
   - 经典
 cover: /img/shakespeare_banner.png
 top_img: /img/shakespeare_banner.png
+abbrlink: shakespeare-sonnet-18
 ---
 
 <div class="poetry-card">

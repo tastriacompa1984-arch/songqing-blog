@@ -6,6 +6,7 @@ categories:
 tags:
   - 读书
   - 总结
+abbrlink: reading-summary-2026
 ---
 
 ## 上半年读过的书
