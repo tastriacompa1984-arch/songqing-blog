@@ -24,8 +24,24 @@ else
 header#page-header(class=`${isHomeClass}` style=home_index_img_bg)
   !=partial('includes/header/nav', {}, {cache: true})
   if is_home() && theme.home_bg_video
-    video#home_bg_video(autoplay loop muted playsinline src=url_for(theme.home_bg_video) style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; pointer-events: none;")
+    video#home_bg_video(autoplay loop muted playsinline webkit-playsinline x5-video-player-type="h5-page" poster=url_for(theme.index_img) src=url_for(theme.home_bg_video) style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; pointer-events: none;")
     .home_bg_video_mask(style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.35); z-index: -1; pointer-events: none;")
+    script.
+      document.addEventListener("DOMContentLoaded", function() {
+        var video = document.getElementById("home_bg_video");
+        if (video) {
+          var playVideo = function() {
+            video.play().catch(function(err) {
+              console.log("Autoplay blocked:", err);
+            });
+          };
+          playVideo();
+          document.addEventListener("WeixinJSBridgeReady", playVideo, false);
+          document.addEventListener("touchstart", function() {
+            if (video.paused) playVideo();
+          }, { once: true });
+        }
+      });
   if top_img !== false
     if is_post()
       if page.bilibili_bg
