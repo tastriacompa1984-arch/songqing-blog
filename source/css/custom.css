@@ -1,0 +1,15 @@
+/* Fix video background visibility on mobile */
+#page-header.full_page {
+    /* If there's a video, ensure background color/image does not block it */
+    background-color: transparent;
+}
+#page-header.full_page #home_bg_video {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+@media screen and (max-width: 768px) {
+    #page-header.full_page {
+        background-image: none !important;
+    }
+}
