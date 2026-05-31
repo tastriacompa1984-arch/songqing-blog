@@ -6,6 +6,8 @@ categories:
 tags:
   - 随想
   - 启航
+cover: /img/hello_world_cover.png
+top_img: /img/hello_world_cover.png
 ---
 
 ## 终于开始了

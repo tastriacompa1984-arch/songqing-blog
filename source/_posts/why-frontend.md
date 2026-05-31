@@ -6,6 +6,8 @@ categories:
 tags:
   - 架构
   - 前端
+cover: /img/frontend_cover.png
+top_img: /img/frontend_cover.png
 ---
 
 ## 选择纯前端的理由
