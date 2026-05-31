@@ -87,3 +87,78 @@
   box-shadow: 0 4px 20px rgba(254, 44, 85, 0.5) !important;
   transform: scale(1.05) !important;
 }
+
+/* Premium Literary Poetry Card Styling */
+.poetry-card {
+  background: var(--anzhiyu-card-bg) !important;
+  border: 1px solid rgba(255, 215, 0, 0.15) !important; /* Gold border */
+  border-radius: 16px !important;
+  padding: 3.5rem 2.5rem !important;
+  margin: 2.5rem 0 !important;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.18), inset 0 0 50px rgba(255, 215, 0, 0.02) !important;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.poetry-card::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  border: 1px dashed rgba(255, 215, 0, 0.12);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.poetry-header {
+  font-family: 'Cinzel', 'Georgia', 'Noto Serif SC', serif !important;
+  font-size: 2.4em !important;
+  font-weight: 700 !important;
+  color: #d4af37 !important; /* Premium Gold */
+  margin-bottom: 0.6rem !important;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.poetry-author {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  font-size: 1.15em !important;
+  font-style: italic !important;
+  opacity: 0.75;
+  letter-spacing: 1px;
+  margin-bottom: 1rem !important;
+}
+
+.poetry-divider {
+  color: #d4af37 !important;
+  font-size: 1.1em;
+  margin: 1.8rem 0 !important;
+  letter-spacing: 8px;
+  opacity: 0.8;
+}
+
+.poetry-content {
+  font-family: 'Lora', 'Georgia', serif !important;
+  font-size: 1.25em !important;
+  line-height: 2.3 !important;
+  color: var(--anzhiyu-fontcolor) !important;
+  margin-bottom: 2.5rem !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.poetry-translation {
+  border-top: 1px solid rgba(255, 215, 0, 0.12);
+  padding-top: 2.5rem !important;
+  margin-top: 2.5rem !important;
+  font-family: 'Noto Serif SC', 'Georgia', serif !important;
+  font-size: 1.18em !important;
+  line-height: 2.1 !important;
+  color: var(--anzhiyu-fontcolor) !important;
+  opacity: 0.95;
+  letter-spacing: 0.5px;
+}
+
