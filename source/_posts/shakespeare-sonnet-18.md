@@ -9,8 +9,8 @@ tags:
   - 诗歌
   - 文学
   - 经典
-cover: /img/shakespeare_banner.png
-top_img: /img/shakespeare_banner.png
+cover: /img/shakespeare_banner.webp
+top_img: /img/shakespeare_banner.webp
 abbrlink: shakespeare-sonnet-18
 ---
 

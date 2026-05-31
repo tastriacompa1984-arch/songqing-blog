@@ -135,7 +135,7 @@ favicon: /favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: /img/avatar.png
+  img: /img/avatar.webp
   effect: false
 
 # Disable all banner image
@@ -772,7 +772,7 @@ preloader:
   source: 3
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
-  avatar: /img/avatar.png # 自定加载动画义头像
+  avatar: /img/avatar.webp # 自定加载动画义头像
 
 # aside (侧边栏)
 # --------------------------------------
@@ -1058,7 +1058,7 @@ home_top:
   banner:
     tips: 抖音精选
     title: 宋青的日常与精彩短视频
-    image: /img/douyin_banner.png
+    image: /img/douyin_banner.webp
     link: https://v.douyin.com/VQM7pei3E8Y/
 
 # 朋友圈配置

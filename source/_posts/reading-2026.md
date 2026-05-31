@@ -7,8 +7,8 @@ tags:
   - 读书
   - 总结
 abbrlink: reading-summary-2026
-cover: /img/reading_cover.png
-top_img: /img/reading_cover.png
+cover: /img/reading_cover.webp
+top_img: /img/reading_cover.webp
 ---
 
 ## 上半年读过的书
