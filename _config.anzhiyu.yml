@@ -1040,6 +1040,11 @@ home_top:
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
       icon: anzhiyu-icon-dove
+    - name: 物理
+      path: /categories/中考物理/
+      shadow: var(--anzhiyu-shadow-yellow)
+      class: yellow
+      icon: anzhiyu-icon-flask
     - name: 阅读
       path: /categories/阅读/
       shadow: var(--anzhiyu-shadow-red)
